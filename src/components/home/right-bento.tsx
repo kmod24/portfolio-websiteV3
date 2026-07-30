@@ -1,0 +1,43 @@
+"use client";
+
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+
+import { BioPanel } from "@/components/home/bio-panel";
+import { BlogsPanel } from "@/components/home/blogs-panel";
+import { ProjectsPanel } from "@/components/home/projects-panel";
+import { SiteNav } from "@/components/home/site-nav";
+import { ThingsPanel } from "@/components/home/things-panel";
+import type { NavId } from "@/lib/site";
+
+const panels: Record<NavId, React.ReactNode> = {
+  home: <BioPanel />,
+  projects: <ProjectsPanel />,
+  blogs: <BlogsPanel />,
+  things: <ThingsPanel />,
+};
+
+export function RightBento() {
+  const [active, setActive] = useState<NavId>("home");
+
+  return (
+    <div className="flex h-[600px] w-full flex-col overflow-hidden rounded-[1.75rem] bg-[var(--bento-outer)] p-5 sm:p-6 md:rounded-[2rem] md:p-7">
+      <SiteNav active={active} onChange={setActive} />
+
+      <div className="relative min-h-0 flex-1">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.22, ease: "easeOut" }}
+            className="absolute inset-0 flex flex-col"
+          >
+            {panels[active]}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
