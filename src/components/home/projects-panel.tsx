@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Portfolio Website V2",
     caption: "my second website focusing on simplicity and a clean design! ",
-    href: "portfolio-website-v2-dr6tws3es-kyles-projects-ed583bf3.vercel.app",
+    href: "https://github.com/kmod24/portfolio-websiteV2",
     tags:["react", "typescript"],
   },
 ];
