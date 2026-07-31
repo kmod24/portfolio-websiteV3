@@ -21,7 +21,7 @@ export function RightBento() {
   const [active, setActive] = useState<NavId>("home");
 
   return (
-    <div className="flex h-[600px] w-full flex-col overflow-hidden rounded-[1.75rem] bg-[var(--bento-outer)] p-5 sm:p-6 md:rounded-[2rem] md:p-7">
+    <div className="flex h-[min(600px,70dvh)] min-h-[480px] w-full flex-col overflow-hidden rounded-[1.75rem] bg-[var(--bento-outer)] p-4 sm:p-5 md:rounded-[2rem] md:p-6 lg:h-[600px] lg:min-h-0 lg:p-7">
       <SiteNav active={active} onChange={setActive} />
 
       <div className="relative min-h-0 flex-1">

@@ -6,18 +6,18 @@ import { SocialLinks } from "@/components/home/social-links";
 
 export default function Home() {
   return (
-    <main className="relative min-h-dvh bg-black px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-12 lg:py-12">
+    <main className="relative flex min-h-dvh items-center justify-center bg-black px-4 py-20 text-white sm:px-6 sm:py-16 lg:px-10 lg:py-12">
       <Image
         src="/logo.png"
         alt="Kyle logo"
         width={48}
         height={48}
-        className="absolute top-5 left-5 z-10 size-12 object-contain sm:top-6 sm:left-6 sm:size-10"
+        className="absolute top-5 left-5 z-10 size-10 object-contain sm:top-6 sm:left-6 sm:size-10"
         priority
       />
 
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-10 lg:justify-between lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
-        <aside className="flex w-full shrink-0 flex-col items-center lg:ml-36 lg:mt-15 lg:w-[280px]">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-32 xl:gap-50">
+        <aside className="flex w-full max-w-[280px] shrink-0 flex-col items-center">
           <ProfileCarousel
             slides={[
               { src: "/pfp.jpeg", zoom: 1.1 },
@@ -31,7 +31,7 @@ export default function Home() {
           <SocialLinks />
         </aside>
 
-        <section className="min-w-0 w-full max-w-[520px] lg:mr-30 lg:mt-3">
+        <section className="w-full min-w-0 max-w-[520px]">
           <RightBento />
         </section>
       </div>

@@ -40,7 +40,7 @@ const projects = [
 
 export function ProjectsPanel() {
   return (
-    <div className="grid min-h-0 flex-1 grid-cols-2 gap-3 overflow-y-auto content-start">
+    <div className="grid min-h-0 flex-1 grid-cols-1 gap-3 overflow-y-auto content-start sm:grid-cols-2">
       {projects.map((project) => (
         <a
         key={project.title}

@@ -84,7 +84,7 @@ export function ProfileCarousel({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 6 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="pointer-events-none absolute top-1/2 left-[calc(100%+1rem)] w-max max-w-[140px] -translate-y-1/2 text-left text-[13px] leading-snug tracking-wide text-white/90 lowercase"
+              className="pointer-events-none mt-3 max-w-[200px] text-center text-[13px] leading-snug tracking-wide text-white/90 lowercase lg:absolute lg:top-1/2 lg:left-[calc(100%+1rem)] lg:mt-0 lg:w-max lg:max-w-[140px] lg:-translate-y-1/2 lg:text-left"
             >
               {caption}
             </motion.p>

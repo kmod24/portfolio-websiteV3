@@ -52,7 +52,7 @@ export function ThingsPanel() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute inset-0 grid grid-cols-2 content-start gap-3 overflow-y-auto"
+            className="absolute inset-0 grid grid-cols-1 content-start gap-3 overflow-y-auto sm:grid-cols-2"
           >
             {things.map((thing, index) => (
               <button
