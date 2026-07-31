@@ -3,8 +3,14 @@ import Image from "next/image";
 import { ProfileCarousel } from "@/components/home/profile-carousel";
 import { RightBento } from "@/components/home/right-bento";
 import { SocialLinks } from "@/components/home/social-links";
+import { getBlogPosts } from "@/lib/mdx";
+
+// Re-read MDX from disk on each request (content/ isn't hot-reloaded)
+export const dynamic = "force-dynamic";
 
 export default function Home() {
+  const posts = getBlogPosts();
+
   return (
     <main className="relative flex min-h-dvh items-center justify-center bg-black px-4 py-20 text-white sm:px-6 sm:py-16 lg:px-10 lg:py-12">
       <Image
@@ -32,7 +38,7 @@ export default function Home() {
         </aside>
 
         <section className="w-full min-w-0 max-w-[520px]">
-          <RightBento />
+          <RightBento posts={posts} />
         </section>
       </div>
     </main>

@@ -52,6 +52,31 @@ export function getAllContent(collection: "blog" | "projects") {
     .filter((item): item is NonNullable<typeof item> => item !== null);
 }
 
+export type BlogPost = {
+  slug: string;
+  title: string;
+  date: string;
+  description: string;
+  content: string;
+};
+
+export function getBlogPosts(): BlogPost[] {
+  return getAllContent("blog")
+    .filter((post) => post.frontmatter.published !== false)
+    .map((post) => ({
+      slug: post.slug,
+      title: post.frontmatter.title,
+      date: post.frontmatter.date ?? "",
+      description: post.frontmatter.description ?? "",
+      content: post.content.trim(),
+    }))
+    .sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return dateB - dateA;
+    });
+}
+
 export async function compileMDXContent(source: string) {
   const { content } = await compileMDX({
     source,
