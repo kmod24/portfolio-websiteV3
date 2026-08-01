@@ -11,7 +11,7 @@ export function SiteNav({ active, onChange }: SiteNavProps) {
   return (
     <nav
       aria-label="Primary"
-      className="flex shrink-0 flex-wrap items-center justify-center gap-x-5 gap-y-2 px-1 pb-4 pt-0.5 sm:justify-start sm:gap-x-6 sm:pl-2"
+      className="flex shrink-0 flex-wrap items-center justify-center gap-x-5 gap-y-2 px-1 pb-4 pt-0.5 sm:gap-x-6"
     >
       {site.nav.map((item) => {
         const isActive = item.id === active;
