@@ -9,7 +9,7 @@ const things = [
     caption:
       "a list of things i carry with me everyday, whether it's going to a coffee shop, the gym, or just strolling around the city",
     content:
-      "- sony xm5 headphones\n- peak design everyday backpack 20L\n- gentle monster lo lou sunglasses\n- fitbit charge 6\n- iongaf sweaties (best sweatpants i've owned)",
+      "- sony xm5 headphones\n- peak design everyday backpack 20L\n- gentle monster lo lou sunglasses\n- fitbit charge 6\n- iongaf sweaty (best sweatpants i've owned)",
   },
   {
     title: "books, movies, & music",
