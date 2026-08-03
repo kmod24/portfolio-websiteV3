@@ -9,7 +9,13 @@ const things = [
     caption:
       "a list of things i carry with me everyday, whether it's going to a coffee shop, the gym, or just strolling around the city",
     content:
-      "- sony xm5 headphones \n - peak design everyday backpack 20L \n - gentle monster lo lou sunglasses \n - fitbit charge 6",
+      "- sony xm5 headphones\n- peak design everyday backpack 20L\n- gentle monster lo lou sunglasses\n- fitbit charge 6\n- iongaf sweaties (best sweatpants i've owned)",
+  },
+  {
+    title: "books, movies, & music",
+    caption: "a list of books, movies, and music i've enjoyed recently",
+    content:
+      "books:\ncurrent reads: bending reality by victoria song, zero to one - peter thiel, the daily stoic - ryan holiday\n\nmovies:\nsome recently watched movies include rewatching the hunger games trilogy, blade runner 2049, spider-man brand new day, and I plan on watching the odyssey by the end of august.\n\nmusic:\ni've been listening to a lot of edm music lately, which include artists such as alesso, porter robinson, isoknock. It's great for working out and keeping me motivated when I'm studying.",
   },
 ];
 
@@ -41,8 +47,12 @@ export function ThingsPanel() {
               {selected.title}
             </h3>
 
-            <div className="mt-5 min-h-0 flex-1 overflow-y-auto text-sm leading-relaxed text-white/90">
-              <p className="whitespace-pre-line">{selected.content}</p>
+            <div className="mt-5 flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto text-sm leading-relaxed text-white/90">
+              {selected.content.split(/\n\n+/).map((block, index) => (
+                <p key={index} className="whitespace-pre-line">
+                  {block.trim()}
+                </p>
+              ))}
             </div>
           </motion.article>
         ) : (
