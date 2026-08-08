@@ -18,7 +18,7 @@ export function BioPanel() {
         <p>
           when i&apos;m not coding, i&apos;m probably rock climbing, hiking,
           playing basketball with friends, learning new languages, playing video
-          games, or making travel plans 
+          games, or making travel plans.
         </p>
         <p>
           i strive to live true to myself and stay unapologetically me. always
