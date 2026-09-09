@@ -17,6 +17,12 @@ const things = [
     content:
       "books:\ncurrent reads: bending reality by victoria song, zero to one - peter thiel, the daily stoic - ryan holiday\n\nmovies:\nsome recently watched movies include rewatching the hunger games trilogy, blade runner 2049, spider-man brand new day, and I plan on watching the odyssey by the end of august.\n\nmusic:\ni've been listening to a lot of edm music lately, which include artists such as alesso, porter robinson, isoknock. It's great for working out and keeping me motivated when I'm studying.",
   },
+  {
+    title: "goals, aspirations, and plans for the future",
+    caption: "a list of goals, aspirations, and plans for the future",
+    content:
+      "there's always been this vision in my head where i'd be a successful entrepreneur, goated software developer, and a role model for my family and friends. i hope that in a few years, i'll be able to look back at how far i've become, but for right now, i'm just working on the systems that will get me there. (to be continued...)",
+  },
 ];
 
 export function ThingsPanel() {
