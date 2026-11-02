@@ -23,6 +23,12 @@ const things = [
     content:
       "there's always been this vision in my head where i'd be a successful entrepreneur, goated software developer, and a role model for my family and friends. i hope that in a few years, i'll be able to look back at how far i've become, but for right now, i'm just working on the systems that will get me there. (to be continued...)",
   },
+  // {
+  //   title: "will i solo travel next year?",
+  //   caption: "",
+  //   content:
+  //     "",
+  // },
 ];
 
 export function ThingsPanel() {

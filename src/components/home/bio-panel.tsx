@@ -21,7 +21,7 @@ export function BioPanel() {
           games, or making travel plans.
         </p>
         <p>
-          i strive to live true to myself and stay unapologetically me. always
+          i strive to live true to myself while putting smiles on people's faces. always
           love meeting new people, feel free to reach out - always down for a
           coffee chat :)
         </p>
