@@ -1,6 +1,13 @@
 const projects = [
   {
 
+    title: "SpeakEasy",
+    caption: "a scenario based language learning app",
+    href: "https://github.com/stickyr1cee/speakeasy",
+    tags: ["react native", "typescript"],
+  },
+  {
+
     title: "BrainrotGPT",
     caption: "turns complex terms into brainrot explanations",
     href: "https://brainrot-gpt-mu.vercel.app/",
